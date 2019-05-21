@@ -4,11 +4,30 @@
     color: #FF1C19;
 }
 
-.div-login-page {
-    max-width: 410px;
-    padding: 5px 5px 5px;
+.form-signup {
+    max-width: 420px;
+    padding: 10px 10px 10px;
+    margin: 0 auto;
+    border: 3px dotted rgba(0,0,0,0.1);
+}
+
+.form-signup-heading {
+    text-align:left;
+    margin-bottom: 10px;
+}
+
+.div-go-login-page {
+    max-width: 420px;
+    padding: 10px 10px 10px;
+    margin: 0 auto;
     background-color: #eee;
     border: 3px dotted rgba(0,0,0,0.1);
     text-align:center;
-    margin-top: 15px;
+}
+
+span.msg {
+	color: blue;
+	display: block;
+	text-align: center;
+	margin-top: 10px;
 }
