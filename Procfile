@@ -1,0 +1,1 @@
+web: java -jar target/tiojiro-login-1.0.jar
