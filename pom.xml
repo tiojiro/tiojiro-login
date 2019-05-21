@@ -12,6 +12,7 @@
 	<groupId>br.com.zukeran</groupId>
 	<artifactId>tiojiro-login</artifactId>
 	<version>1.0</version>
+	<packaging>war</packaging>
 	<name>tiojiro-login</name>
 	<description>Tiojiro Login</description>
 
@@ -64,6 +65,17 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+				<version>2.0.8</version>
+				<configuration>
+					<appName>tiojiro-login</appName>
+					<processTypes>
+						<web>java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.war</web>
+					</processTypes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
