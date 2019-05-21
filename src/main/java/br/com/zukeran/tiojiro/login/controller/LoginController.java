@@ -46,7 +46,6 @@ public class LoginController {
 		if(!user.getPassword().trim().equals(user.getConfirmPassword().trim())) {
 			bindingResult.rejectValue("confirmPassword", "error.user", "Password and Confirm Password do not match");
 		}
-		
 		if (bindingResult.hasErrors()) {
 			modelAndView.setViewName("registration");
 		} else {
