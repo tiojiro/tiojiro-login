@@ -11,8 +11,8 @@
 		<br/>
 		<div class="container">
 			<form th:action="@{/registration}" th:object="${user}" method="POST" class="form-signup">
-				<h3 class="form-signup-heading" th:text="'Join us'"></h3>
-
+				<h3 class="form-signup-heading"><img th:src="@{/images/logoCloud.png}" width="15%" height="15%" alt="Logo" /> Join us</h3>
+				
 				<br/><input type="text" th:field="*{name}" placeholder="Name" class="form-control" />
 				<label th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="validation-message"></label> 
 
@@ -28,13 +28,13 @@
 				<br/><input type="password" th:field="*{confirmPassword}" placeholder="Confirm Password" class="form-control"/>
 				<label th:if="${#fields.hasErrors('confirmPassword')}" th:errors="*{confirmPassword}" class="validation-message"></label>
 
-				<br/><button type="submit" class="btn btn-primary btn-block">Create an account</button>
+				<br/><button type="submit" class="btn btn-sm btn-primary btn-block">Create an account</button>
 				<span th:utext="${successMessage}" class="msg"></span>
 			</form>
 		</div>
 		<br/>
 		<div class="div-go-login-page">
-			Go to <a th:href="@{/}">Log In</a> page
+			<a th:href="@{/}">Go to Log In page</a>
 		</div>
 	</body>
 </html>
